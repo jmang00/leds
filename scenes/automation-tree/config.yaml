@@ -1,0 +1,14 @@
+NO_LEDS: 500
+LAYOUT: cone
+FPS: 60
+BRIGHTNESS: 0.4
+CAMS:
+  # List cameras - can either be an index or a url
+  A: http://172.32.1.225:8080/?action=snapshot
+SCAN:
+  TYPE: 3d-spinning-manual
+  ANGLES:
+    - 0
+    - 90
+    - 180
+    - 270
