@@ -18,31 +18,27 @@ def input_choice():
 def choose_scene():
     global l
     scenes_path = 'scenes'  # Specify the path to the scenes folder
-    try:
-        # List all directories in the scenes folder
-        scene_dirs = sorted([d for d in os.listdir(scenes_path) if os.path.isdir(os.path.join(scenes_path, d))])
-        if scene_dirs:
-            print('\nAvailable scenes:')
-            for i, scene in enumerate(scene_dirs):
-                print(f'{i+1}. {scene}')
+
+    # List all directories in the scenes folder
+    scene_dirs = sorted([d for d in os.listdir(scenes_path) if os.path.isdir(os.path.join(scenes_path, d))])
+    if scene_dirs:
+        print('\nAvailable scenes:')
+        for i, scene in enumerate(scene_dirs):
+            print(f'{i+1}. {scene}')
+    else:
+        print("No scenes found.")
+        return
+        
+    while True:
+        # Ask user to choose a scene and load it
+        scene_no = input_choice()
+        if scene_no.isdigit() and 0 < int(scene_no) <= len(scene_dirs):
+            scene_name = scene_dirs[int(scene_no) - 1]
+            print()
+            l.load_scene(scene_name)
+            break
         else:
-            print("No scenes found.")
-            return
-        
-        while True:
-            # Ask user to choose a scene and load it
-            scene_no = input_choice()
-            if scene_no.isdigit() and 0 < int(scene_no) <= len(scene_dirs):
-                scene_name = scene_dirs[int(scene_no) - 1]
-                print()
-                l.load_scene(scene_name)
-                break
-            else:
-                print("Invalid choice. Please try again.")
-            
-    except FileNotFoundError:
-        print(f"Error: The directory '{scenes_path}' does not exist.")
-        
+            print("Invalid choice. Please try again.")
 
 def choose_effect():
     global l

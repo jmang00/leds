@@ -1,10 +1,12 @@
 NO_LEDS: 500
 LAYOUT: 3d
 FPS: 60
-BRIGHTNESS: 0.4
+BRIGHTNESS: 0
 CAMS:
   # List cameras - can either be an index or a url
-  A: http://172.32.1.225:8080/?action=snapshot
+  A:
+    URL: http://172.32.1.225:8080/?action=snapshot
+    ROTATE: 270
 SCAN:
   TYPE: 3d-spinning-manual
   ANGLES:

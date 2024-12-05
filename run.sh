@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /home/campi/leds
+cd ~/leds
 sudo -E python run.py
