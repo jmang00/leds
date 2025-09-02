@@ -7,7 +7,7 @@ I've come back to it quite a few times so it's pretty messy!
 ## /2022-tree-effects
 How it all started! Matt Parker made a [video](https://www.youtube.com/watch?v=WuMRJf6B5Q4&ab_channel=Stand-upMaths) about an LED Christmas tree, which inspired me to make a simulation and some of my own effects.
 
-## /2023-light
+## /2023-lights
 In 2023, I decided to try this out myself. Through Monash Automation, a student team, I setup my own tree and scanned it.
 
 ## /2024-pi-setup-backup
